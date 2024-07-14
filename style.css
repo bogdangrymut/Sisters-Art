@@ -14,7 +14,7 @@ p {
 .page {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
-  background-color: #151515;
+  background-color: black;
 }
 
 .header {
@@ -32,8 +32,6 @@ p {
   margin: 0 auto 20px;
   max-width: 1400px;
   text-align: center;
-
-  
 }
 
 .header__banner {
@@ -45,8 +43,6 @@ p {
   text-transform: uppercase;
   margin: 20px auto 0;
 }
-
-/* add a CSS rule for the header title here */
 
 .overlay {
   width: 100%;
@@ -70,9 +66,33 @@ p {
 .card{
   width: 490px;
   min-height: 440px;
-  background: #ffffff;
+  background: black;
 
 }
+
+@keyframes circle {
+  0% {
+    transform: translate(0,0);
+  }
+  25% {
+    transform: translate(7px, 0);
+  }
+  50% {
+    transform: translate(7px, 7px);
+  }
+  75% {
+    transform: translate(0, 7px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+.card__image:hover{
+  animation: circle 7s infinite;
+}
+
 
 .card__image{
   width: 100%;
@@ -81,24 +101,40 @@ p {
   height: 500px;
 }
 
+
+
 .card__title{
   font-size: 24px;
   line-height: 1.5;
   font-weight: 500;
   letter-spacing: -0.16px;
-  color: #151515;
+  color: rgb(241, 234, 133);
   margin-bottom: 10px;
+}
+
+.card__title:hover{
+cursor: pointer;
+color: #ffe247;
 }
 
 .card__content{
   padding: 20px;
+  background-color: black;
 }
+
+
 .card__text{
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-  color: #151515;
+  color: rgb(241, 234, 133);
 }
+
+.card__text:hover{
+  cursor: pointer;
+  color: #ffe247;
+}
+
 .footer{
   padding: 20px 0 40px;
   font-size: 16px;
